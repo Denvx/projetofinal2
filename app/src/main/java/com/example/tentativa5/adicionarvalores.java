@@ -46,6 +46,7 @@ public class adicionarvalores extends AppCompatActivity {
     ImageView btn_historico, btn_adicionar, btn_usuario;
     AppCompatButton btn_enviar;
     EditText campo1, campo2, campo3, campo4, campo5;
+    EditText campo1_1, campo2_2, campo3_3, campo4_4, campo5_5;
     TextView tv_snv;
     FirebaseAuth mAuth;
 
@@ -80,6 +81,11 @@ public class adicionarvalores extends AppCompatActivity {
         campo3 = findViewById(R.id.campo3);
         campo4 = findViewById(R.id.campo4);
         campo5 = findViewById(R.id.campo5);
+        campo1_1 = findViewById(R.id.campo1_1);
+        campo2_2 = findViewById(R.id.campo2_2);
+        campo3_3 = findViewById(R.id.campo3_3);
+        campo4_4 = findViewById(R.id.campo4_4);
+        campo5_5 = findViewById(R.id.campo5_5);
     }
 
     // Configuração da Toolbar
@@ -251,10 +257,19 @@ public class adicionarvalores extends AppCompatActivity {
         btn_enviar.postDelayed(() -> {
             Map<String, Object> campos = new HashMap<>();
             campos.put("campo1", campo1.getText().toString());
+            campos.put("campo1_1", campo1_1.getText().toString());
+
             campos.put("campo2", campo2.getText().toString());
+            campos.put("campo2_2", campo2_2.getText().toString());
+
             campos.put("campo3", campo3.getText().toString());
+            campos.put("campo3_3", campo3_3.getText().toString());
+
             campos.put("campo4", campo4.getText().toString());
+            campos.put("campo4_4", campo4_4.getText().toString());
+
             campos.put("campo5", campo5.getText().toString());
+            campos.put("campo5_5", campo5_5.getText().toString());
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("dados_enviados");
@@ -262,6 +277,8 @@ public class adicionarvalores extends AppCompatActivity {
             myRef.push().setValue(campos)
                     .addOnSuccessListener(aVoid -> Log.d("FIREBASE", "Dados enviados com sucesso!"))
                     .addOnFailureListener(e -> Log.e("FIREBASE", "Erro ao enviar dados: " + e.getMessage()));
+
+
 
         }, 100);
     });

@@ -17,6 +17,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:background="@color/white_smoke"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,179 +25,427 @@
 
       <!-- Formulário ou conteúdo -->
       <androidx.constraintlayout.widget.ConstraintLayout
+
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/container"
-            style="@style/container"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <View-->
+<!--            android:id="@+id/container"-->
+<!--            style="@style/container"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@color/white_smoke"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
-            android:id="@+id/tv_adicionar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Tela de adicionar valores"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/adicione1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="VALOR DO PRIMEIRO"
-            app:layout_constraintEnd_toStartOf="@+id/campo1"
-            app:layout_constraintHorizontal_bias="0.514"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toTopOf="@+id/container" />
-
-        <EditText
-            android:id="@+id/campo1"
-            android:layout_width="90dp"
-            android:layout_marginTop="16dp"
-            android:height="45dp"
-            android:gravity="center"
-            android:hint="@string/email"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintHorizontal_bias="0.978"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toTopOf="@id/container"
-            app:layout_goneMarginTop="10dp"
-            android:layout_height="0dp"/>
-
-        <TextView
-            android:id="@+id/adicione2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="VALOR DO SEGUNDO"
-            app:layout_constraintEnd_toStartOf="@+id/campo2"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/adicione1" />
-
-        <EditText
-            android:id="@+id/campo2"
-            android:layout_width="90dp"
-            android:layout_marginTop="16dp"
-            android:height="45dp"
-            android:gravity="center"
-            android:hint="@string/email"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintHorizontal_bias="0.978"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/campo1"
-            android:layout_height="0dp"/>
+          <TextView
+              android:id="@+id/tv_adicionar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="48dp"
+              android:text="@string/hemograma"
+              android:textColor="@android:color/black"
+              android:textSize="30sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.333"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
-            android:id="@+id/adicione3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="VALOR DO TERCEIRO"
-            app:layout_constraintEnd_toStartOf="@+id/campo3"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/adicione2" />
+          <TextView
+              android:id="@+id/adicione5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="480dp"
+              android:layout_marginRight="315dp"
+              android:text="@string/basofilo"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.033"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/campo3"
-            android:layout_width="90dp"
-            android:layout_marginTop="16dp"
-            android:height="45dp"
-            android:gravity="center"
-            android:hint="@string/email"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintHorizontal_bias="0.978"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/campo2"
-            android:layout_height="0dp"/>
+          <TextView
+              android:id="@+id/adicione2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="268dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginRight="309dp"
+              android:text="@string/linfocito"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.042"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/adicione4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="VALOR DO QUARTO"
-            app:layout_constraintEnd_toStartOf="@+id/campo4"
-            app:layout_constraintHorizontal_bias="0.477"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/adicione3" />
+          <TextView
+              android:id="@+id/adicione1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="200dp"
+              android:layout_marginRight="290dp"
+              android:layout_marginStart="10dp"
+              android:text="@string/netrofilo"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.044"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/campo4"
-            android:layout_width="90dp"
-            android:layout_marginTop="16dp"
-            android:height="45dp"
-            android:gravity="center"
-            android:hint="@string/email"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintHorizontal_bias="0.978"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/campo3"
-            android:layout_height="0dp"/>
+          <EditText
+              android:id="@+id/campo1"
+              android:layout_width="40dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="192dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:inputType="number"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.474"
+              app:layout_constraintStart_toEndOf="@+id/adicione1"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
 
-        <TextView
-            android:id="@+id/adicione5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="VALOR DO QUINTO"
-            app:layout_constraintEnd_toStartOf="@+id/campo5"
-            app:layout_constraintHorizontal_bias="0.474"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/adicione4" />
+          <TextView
+              android:id="@+id/porcent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="200dp"
+              android:text="@string/porcent"
+              android:textStyle="bold"
+              app:layout_constraintStart_toEndOf="@+id/campo1"
+              app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/campo5"
-            android:layout_width="90dp"
-            android:layout_marginTop="16dp"
-            android:height="45dp"
-            android:gravity="center"
-            android:hint="@string/email"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintHorizontal_bias="0.978"
-            app:layout_constraintStart_toStartOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/campo4"
-            android:layout_height="0dp"/>
+          <EditText
+              android:id="@+id/campo1_1"
+              android:inputType="number"
+              android:layout_width="60dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="192dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintStart_toEndOf="@+id/porcent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
+          <TextView
+              android:id="@+id/medi"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="200dp"
+              android:text="@string/U"
+              app:layout_constraintStart_toEndOf="@+id/campo1_1"
+              app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_enviar"
-            style="@style/button"
-            android:layout_width="199dp"
-            android:layout_height="43dp"
-            android:layout_marginBottom="4dp"
-            android:text="@string/enviar"
-            android:textSize="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/container"
-            app:layout_constraintStart_toStartOf="@+id/container" />
+          <EditText
+              android:id="@+id/campo2"
+              android:layout_width="40dp"
+              android:layout_height="0dp"
+              android:layout_marginStart="0dp"
+              android:layout_marginTop="261dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:inputType="number"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.507"
+              app:layout_constraintStart_toEndOf="@+id/adicione2"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/porcent2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="268dp"
+              android:text="@string/porcent"
+              android:textStyle="bold"
+              app:layout_constraintStart_toEndOf="@+id/campo2"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo2_2"
+              android:inputType="number"
+              android:layout_width="60dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="261dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintStart_toEndOf="@+id/porcent2"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
+          <TextView
+              android:id="@+id/medi2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="268dp"
+              android:text="@string/U"
+              app:layout_constraintStart_toEndOf="@+id/campo2_2"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:id="@+id/adicione3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="340dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginRight="306dp"
+              android:text="@string/monocito"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.042"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo3"
+              android:layout_width="40dp"
+              android:layout_height="0dp"
+              android:layout_marginStart="0dp"
+              android:layout_marginTop="332dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:inputType="number"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.507"
+              app:layout_constraintStart_toEndOf="@+id/adicione3"
+              app:layout_constraintTop_toTopOf="parent" />
+          <TextView
+              android:id="@+id/porcent3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="340dp"
+              android:text="@string/porcent"
+              android:textStyle="bold"
+              app:layout_constraintStart_toEndOf="@+id/campo3"
+              app:layout_constraintTop_toTopOf="parent" />
+          <EditText
+              android:id="@+id/campo3_3"
+              android:inputType="number"
+              android:layout_width="60dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="332dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintStart_toEndOf="@+id/porcent3"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
+          <TextView
+              android:id="@+id/medi3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="340dp"
+              android:text="@string/U"
+              app:layout_constraintStart_toEndOf="@+id/campo3_3"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/adicione4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="408dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginRight="298dp"
+              android:text="@string/eocinofilo"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.046"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo4"
+              android:layout_width="40dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="399dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:inputType="number"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.496"
+              app:layout_constraintStart_toEndOf="@+id/adicione4"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/porcent4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="408dp"
+              android:text="@string/porcent"
+              android:textStyle="bold"
+              app:layout_constraintStart_toEndOf="@+id/campo4"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo4_4"
+              android:inputType="number"
+              android:layout_width="60dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="399dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintStart_toEndOf="@+id/porcent4"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
+          <TextView
+              android:id="@+id/medi4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="408dp"
+              android:text="@string/U"
+              app:layout_constraintStart_toEndOf="@+id/campo4_4"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo5"
+              android:layout_width="40dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="472dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:inputType="number"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.525"
+              app:layout_constraintStart_toEndOf="@+id/adicione5"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/porcent5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="480dp"
+              android:text="@string/porcent"
+              android:textStyle="bold"
+              app:layout_constraintStart_toEndOf="@+id/campo5"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/campo5_5"
+              style="@style/Animation.Design.BottomSheetDialog"
+              android:inputType="number"
+              android:layout_width="60dp"
+              android:layout_height="0dp"
+              android:layout_marginTop="472dp"
+              android:height="45dp"
+              android:gravity="center"
+              android:hint="@string/email"
+              android:textColor="@color/black"
+              android:textSize="8sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintStart_toEndOf="@+id/porcent5"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_goneMarginTop="10dp" />
+          <TextView
+              android:id="@+id/medi5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="480dp"
+              android:text="@string/U"
+              app:layout_constraintStart_toEndOf="@+id/campo5_5"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="528dp"
+              android:text="___________ERITROGRAMA___________"
+              android:textColor="@color/black"
+              android:textSize="24dp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/btn_enviar"
+              style="@style/button"
+              android:layout_width="199dp"
+              android:layout_height="43dp"
+              android:layout_marginBottom="4dp"
+               android:text="@string/enviar"
+               android:textSize="10dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent" />
+
+          <TextView
+              android:id="@+id/textView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="0dp"
+              android:layout_marginTop="132dp"
+              android:gravity="center"
+              android:text="@string/leucograma"
+              android:textColor="@color/black"
+              android:textSize="24sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.41"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
 
       </androidx.constraintlayout.widget.ConstraintLayout>
@@ -285,5 +534,12 @@
       android:fitsSystemWindows="true"
       android:layout_marginBottom="90dp"
       app:itemTextColor="@color/black"
-      app:menu="@menu/side_libs" />
+      app:menu="@menu/side_libs" >
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="TextView" />
+  </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>
