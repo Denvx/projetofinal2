@@ -58,6 +58,7 @@
               android:id="@+id/adicione5"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textSize="25dp"
               android:layout_marginStart="10dp"
               android:layout_marginTop="480dp"
               android:layout_marginRight="315dp"
@@ -72,6 +73,7 @@
               android:id="@+id/adicione2"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textSize="25dp"
               android:layout_marginTop="268dp"
               android:layout_marginStart="10dp"
               android:layout_marginRight="309dp"
@@ -86,6 +88,7 @@
               android:id="@+id/adicione1"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textSize="25dp"
               android:layout_marginTop="200dp"
               android:layout_marginRight="290dp"
               android:layout_marginStart="10dp"
@@ -98,19 +101,21 @@
 
           <EditText
               android:id="@+id/campo1"
-              android:layout_width="40dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="192dp"
+              style="@style/btnadicionar"
+              android:layout_width="52dp"
+              android:layout_height="46dp"
+              android:layout_marginStart="140dp"
+              android:layout_marginTop="194dp"
               android:height="45dp"
               android:gravity="center"
-              android:hint="@string/email"
+              android:hint="Ex: 40,0"
               android:inputType="number"
               android:textColor="@color/black"
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.474"
-              app:layout_constraintStart_toEndOf="@+id/adicione1"
+              app:layout_constraintHorizontal_bias="0.358"
+              app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent"
               app:layout_goneMarginTop="10dp" />
 
@@ -119,7 +124,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="200dp"
+              android:layout_marginTop="207dp"
               android:text="@string/porcent"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/campo1"
@@ -127,38 +132,41 @@
 
           <EditText
               android:id="@+id/campo1_1"
-              android:inputType="number"
+              style="@style/btnadicionar"
               android:layout_width="60dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="192dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="194dp"
               android:height="45dp"
               android:gravity="center"
-              android:hint="@string/email"
+              android:hint="EX: 40,0"
+              android:inputType="number"
               android:textColor="@color/black"
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.259"
+              app:layout_constraintHorizontal_bias="0.272"
               app:layout_constraintStart_toEndOf="@+id/porcent"
               app:layout_constraintTop_toTopOf="parent"
               app:layout_goneMarginTop="10dp" />
+
           <TextView
               android:id="@+id/medi"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textStyle="bold"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="200dp"
+              android:layout_marginTop="207dp"
               android:text="@string/U"
               app:layout_constraintStart_toEndOf="@+id/campo1_1"
               app:layout_constraintTop_toTopOf="parent" />
 
           <EditText
               android:id="@+id/campo2"
-              android:layout_width="40dp"
-              android:layout_height="0dp"
-              android:layout_marginStart="0dp"
-              android:layout_marginTop="261dp"
+              style="@style/btnadicionar"
+              android:layout_width="52dp"
+              android:layout_height="46dp"
+              android:layout_marginStart="140dp"
+              android:layout_marginTop="260dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -167,8 +175,8 @@
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.507"
-              app:layout_constraintStart_toEndOf="@+id/adicione2"
+              app:layout_constraintHorizontal_bias="0.356"
+              app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent" />
 
           <TextView
@@ -176,7 +184,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="268dp"
+              android:layout_marginTop="274dp"
               android:text="@string/porcent"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/campo2"
@@ -184,10 +192,11 @@
 
           <EditText
               android:id="@+id/campo2_2"
+              style="@style/btnadicionar"
               android:inputType="number"
               android:layout_width="60dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="261dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="262dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -205,7 +214,7 @@
               android:layout_height="wrap_content"
               android:textStyle="bold"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="268dp"
+              android:layout_marginTop="274dp"
               android:text="@string/U"
               app:layout_constraintStart_toEndOf="@+id/campo2_2"
               app:layout_constraintTop_toTopOf="parent" />
@@ -215,6 +224,7 @@
               android:id="@+id/adicione3"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textSize="25dp"
               android:layout_marginTop="340dp"
               android:layout_marginStart="10dp"
               android:layout_marginRight="306dp"
@@ -227,9 +237,10 @@
 
           <EditText
               android:id="@+id/campo3"
-              android:layout_width="40dp"
-              android:layout_height="0dp"
-              android:layout_marginStart="0dp"
+              style="@style/btnadicionar"
+              android:layout_width="52dp"
+              android:layout_height="46dp"
+              android:layout_marginStart="140dp"
               android:layout_marginTop="332dp"
               android:height="45dp"
               android:gravity="center"
@@ -239,25 +250,27 @@
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.507"
-              app:layout_constraintStart_toEndOf="@+id/adicione3"
+              app:layout_constraintHorizontal_bias="0.356"
+              app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent" />
+
           <TextView
               android:id="@+id/porcent3"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="340dp"
+              android:layout_marginTop="345dp"
               android:text="@string/porcent"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/campo3"
               app:layout_constraintTop_toTopOf="parent" />
           <EditText
               android:id="@+id/campo3_3"
+              style="@style/btnadicionar"
               android:inputType="number"
               android:layout_width="60dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="332dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="334dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -275,7 +288,7 @@
               android:layout_height="wrap_content"
               android:textStyle="bold"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="340dp"
+              android:layout_marginTop="345dp"
               android:text="@string/U"
               app:layout_constraintStart_toEndOf="@+id/campo3_3"
               app:layout_constraintTop_toTopOf="parent" />
@@ -284,6 +297,7 @@
               android:id="@+id/adicione4"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textSize="25dp"
               android:layout_marginTop="408dp"
               android:layout_marginStart="10dp"
               android:layout_marginRight="298dp"
@@ -296,9 +310,11 @@
 
           <EditText
               android:id="@+id/campo4"
-              android:layout_width="40dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="399dp"
+              style="@style/btnadicionar"
+              android:layout_width="52dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="400dp"
+              android:layout_marginStart="140dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -307,8 +323,8 @@
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.496"
-              app:layout_constraintStart_toEndOf="@+id/adicione4"
+              app:layout_constraintHorizontal_bias="0.356"
+              app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent" />
 
           <TextView
@@ -316,7 +332,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="408dp"
+              android:layout_marginTop="413dp"
               android:text="@string/porcent"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/campo4"
@@ -324,10 +340,11 @@
 
           <EditText
               android:id="@+id/campo4_4"
+              style="@style/btnadicionar"
               android:inputType="number"
               android:layout_width="60dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="399dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="402dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -345,16 +362,18 @@
               android:layout_height="wrap_content"
               android:textStyle="bold"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="408dp"
+              android:layout_marginTop="413dp"
               android:text="@string/U"
               app:layout_constraintStart_toEndOf="@+id/campo4_4"
               app:layout_constraintTop_toTopOf="parent" />
 
           <EditText
               android:id="@+id/campo5"
-              android:layout_width="40dp"
-              android:layout_height="0dp"
+              style="@style/btnadicionar"
+              android:layout_width="52dp"
+              android:layout_height="46dp"
               android:layout_marginTop="472dp"
+              android:layout_marginStart="140dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -363,8 +382,8 @@
               android:textSize="8sp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.525"
-              app:layout_constraintStart_toEndOf="@+id/adicione5"
+              app:layout_constraintHorizontal_bias="0.356"
+              app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent" />
 
           <TextView
@@ -372,7 +391,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="480dp"
+              android:layout_marginTop="486dp"
               android:text="@string/porcent"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/campo5"
@@ -380,11 +399,11 @@
 
           <EditText
               android:id="@+id/campo5_5"
-              style="@style/Animation.Design.BottomSheetDialog"
+              style="@style/btnadicionar"
               android:inputType="number"
               android:layout_width="60dp"
-              android:layout_height="0dp"
-              android:layout_marginTop="472dp"
+              android:layout_height="46dp"
+              android:layout_marginTop="474dp"
               android:height="45dp"
               android:gravity="center"
               android:hint="@string/email"
@@ -402,20 +421,22 @@
               android:layout_height="wrap_content"
               android:textStyle="bold"
               android:layout_marginStart="4dp"
-              android:layout_marginTop="480dp"
+              android:layout_marginTop="486dp"
               android:text="@string/U"
               app:layout_constraintStart_toEndOf="@+id/campo5_5"
               app:layout_constraintTop_toTopOf="parent" />
 
           <TextView
+              android:id="@+id/textView4"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginTop="528dp"
+              android:layout_marginTop="548dp"
               android:text="___________ERITROGRAMA___________"
               android:textColor="@color/black"
               android:textSize="24dp"
               android:textStyle="bold"
               app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.3"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent" />
 
@@ -424,12 +445,11 @@
               style="@style/button"
               android:layout_width="199dp"
               android:layout_height="43dp"
-              android:layout_marginBottom="4dp"
-               android:text="@string/enviar"
-               android:textSize="10dp"
+              android:text="@string/enviar"
+              android:textSize="10dp"
               app:layout_constraintBottom_toBottomOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintEnd_toEndOf="parent" />
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" />
 
           <TextView
               android:id="@+id/textView"
