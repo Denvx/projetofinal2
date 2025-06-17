@@ -91,9 +91,11 @@ public class perfiluser extends AppCompatActivity {
             }
         });
 
-        btn_historico.setOnClickListener(v ->
-                Toast.makeText(this, "Histórico clicado!", Toast.LENGTH_SHORT).show()
-        );
+        btn_historico.setOnClickListener(v ->{
+            Intent intent = new Intent(this, historicoUser.class);
+            startActivity(intent);
+//          Toast.makeText(this, "Histórico clicado!", Toast.LENGTH_SHORT).show()
+        });
 
         btn_adicionar.setOnClickListener(this::popupadicionar);
     }

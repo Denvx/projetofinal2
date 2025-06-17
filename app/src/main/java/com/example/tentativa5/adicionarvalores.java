@@ -283,7 +283,7 @@ public class adicionarvalores extends AppCompatActivity {
                         campo.setError("Digite um número válido");
                         todosValidos = false;
                     } else {
-                        campo.setError(null); // Limpa erro se estiver certo
+                        campo.setError(null); //O erro some
                     }
                 }
 
@@ -328,7 +328,7 @@ public class adicionarvalores extends AppCompatActivity {
     }
 
     private boolean todosNumeros(String str) {
-        if (str == null || str.isEmpty()) return false;
+        if (str == null || str.isEmpty()) return false; //verifica se é nulo ou vazio e retorna falso
         try {
             Double.parseDouble(str.replace(",", "."));  // Aceita vírgula como decimal
             return true;
