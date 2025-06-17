@@ -260,46 +260,83 @@ public class adicionarvalores extends AppCompatActivity {
 //    }
 
     private void enviarJSON(){
-    btn_enviar.setOnClickListener(v -> {
-        animacaoBounce(btn_enviar);
-        btn_enviar.postDelayed(() -> {
-            Map<String, Object> campos = new HashMap<>();
-            campos.put("campo1", campo1.getText().toString());
-            campos.put("campo1_1", campo1_1.getText().toString());
+        btn_enviar.setOnClickListener(v -> {
+            animacaoBounce(btn_enviar);
+            btn_enviar.postDelayed(() -> {
+                boolean todosValidos = true;
 
-            campos.put("campo2", campo2.getText().toString());
-            campos.put("campo2_2", campo2_2.getText().toString());
+                EditText[] camposEditTexts = {
+                        campo1, campo1_1, campoE1,
+                        campo2, campo2_2, campoE2,
+                        campo3, campo3_3, campoE3,
+                        campo4, campo4_4, campoE4,
+                        campo5, campo5_5, campoE5,
+                                          campoE6,
+                                          campoE7
+                };
 
-            campos.put("campo3", campo3.getText().toString());
-            campos.put("campo3_3", campo3_3.getText().toString());
+                 //Verificação se é so numeros
+                for (EditText campo : camposEditTexts) {
+                    String valor = campo.getText().toString().trim();
 
-            campos.put("campo4", campo4.getText().toString());
-            campos.put("campo4_4", campo4_4.getText().toString());
+                    if (!todosNumeros(valor)) {
+                        campo.setError("Digite um número válido");
+                        todosValidos = false;
+                    } else {
+                        campo.setError(null); // Limpa erro se estiver certo
+                    }
+                }
 
-            campos.put("campo5", campo5.getText().toString());
-            campos.put("campo5_5", campo5_5.getText().toString());
+                if (todosValidos){
 
-            //           ERITROGRAMA
-            campos.put("campoE1", campoE1.getText().toString());
-            campos.put("campoE2", campoE2.getText().toString());
-            campos.put("campoE3", campoE3.getText().toString());
-            campos.put("campoE4", campoE4.getText().toString());
-            campos.put("campoE5", campoE5.getText().toString());
-            campos.put("campoE6", campoE6.getText().toString());
-            campos.put("campoE7", campoE7.getText().toString());
+                    Map<String, Object> campos = new HashMap<>();
+                    campos.put("campo1", campo1.getText().toString());
+                    campos.put("campo1_1", campo1_1.getText().toString());
 
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference myRef = database.getReference("dados_enviados");
+                    campos.put("campo2", campo2.getText().toString());
+                    campos.put("campo2_2", campo2_2.getText().toString());
 
-            myRef.push().setValue(campos)
-                    .addOnSuccessListener(aVoid -> Log.d("FIREBASE", "Dados enviados com sucesso!"))
-                    .addOnFailureListener(e -> Log.e("FIREBASE", "Erro ao enviar dados: " + e.getMessage()));
+                    campos.put("campo3", campo3.getText().toString());
+                    campos.put("campo3_3", campo3_3.getText().toString());
 
+                    campos.put("campo4", campo4.getText().toString());
+                    campos.put("campo4_4", campo4_4.getText().toString());
 
+                    campos.put("campo5", campo5.getText().toString());
+                    campos.put("campo5_5", campo5_5.getText().toString());
 
-        }, 100);
-    });
-}
+                    //           ERITROGRAMA
+                    campos.put("campoE1", campoE1.getText().toString());
+                    campos.put("campoE2", campoE2.getText().toString());
+                    campos.put("campoE3", campoE3.getText().toString());
+                    campos.put("campoE4", campoE4.getText().toString());
+                    campos.put("campoE5", campoE5.getText().toString());
+                    campos.put("campoE6", campoE6.getText().toString());
+                    campos.put("campoE7", campoE7.getText().toString());
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("dados_enviados");
+
+                    myRef.push().setValue(campos)
+                            .addOnSuccessListener(aVoid -> Log.d("FIREBASE", "Dados enviados com sucesso!"))
+                            .addOnFailureListener(e -> Log.e("FIREBASE", "Erro ao enviar dados: " + e.getMessage()));
+                }else {
+                    Toast.makeText(this, "Preencha todos os campos com números válidos.", Toast.LENGTH_SHORT).show();
+                }
+            }, 100);
+        });
+    }
+
+    private boolean todosNumeros(String str) {
+        if (str == null || str.isEmpty()) return false;
+        try {
+            Double.parseDouble(str.replace(",", "."));  // Aceita vírgula como decimal
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
     private void animacaoBounce(View view) {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bouce);
         view.startAnimation(animation);
