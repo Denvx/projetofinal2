@@ -47,6 +47,7 @@ public class adicionarvalores extends AppCompatActivity {
     AppCompatButton btn_enviar;
     EditText campo1, campo2, campo3, campo4, campo5;
     EditText campo1_1, campo2_2, campo3_3, campo4_4, campo5_5;
+    EditText campoE1, campoE2, campoE3, campoE4, campoE5, campoE6, campoE7;
     TextView tv_snv;
     FirebaseAuth mAuth;
 
@@ -86,6 +87,13 @@ public class adicionarvalores extends AppCompatActivity {
         campo3_3 = findViewById(R.id.campo3_3);
         campo4_4 = findViewById(R.id.campo4_4);
         campo5_5 = findViewById(R.id.campo5_5);
+        campoE1 = findViewById(R.id.campoE1);
+        campoE2 = findViewById(R.id.campoE2);
+        campoE3 = findViewById(R.id.campoE3);
+        campoE4 = findViewById(R.id.campoE4);
+        campoE5 = findViewById(R.id.campoE5);
+        campoE6 = findViewById(R.id.campoE6);
+        campoE7 = findViewById(R.id.campoE7);
     }
 
     // Configuração da Toolbar
@@ -270,6 +278,15 @@ public class adicionarvalores extends AppCompatActivity {
 
             campos.put("campo5", campo5.getText().toString());
             campos.put("campo5_5", campo5_5.getText().toString());
+
+            //           ERITROGRAMA
+            campos.put("campoE1", campoE1.getText().toString());
+            campos.put("campoE2", campoE2.getText().toString());
+            campos.put("campoE3", campoE3.getText().toString());
+            campos.put("campoE4", campoE4.getText().toString());
+            campos.put("campoE5", campoE5.getText().toString());
+            campos.put("campoE6", campoE6.getText().toString());
+            campos.put("campoE7", campoE7.getText().toString());
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("dados_enviados");
