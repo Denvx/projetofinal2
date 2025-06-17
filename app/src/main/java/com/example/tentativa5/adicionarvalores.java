@@ -128,9 +128,11 @@ public class adicionarvalores extends AppCompatActivity {
 
     // Configuração de todos os botões
     private void configurarBotoes() {
-        btn_historico.setOnClickListener(v ->
-                Toast.makeText(this, "Historico clicado!", Toast.LENGTH_SHORT).show()
-        );
+        btn_historico.setOnClickListener(v ->{
+            Intent intent = new Intent(this, historicoUser.class);
+            startActivity(intent);
+//          Toast.makeText(this, "Histórico clicado!", Toast.LENGTH_SHORT).show();
+        });
 
         btn_adicionar.setOnClickListener(this::popupadicionar);
 
@@ -188,16 +190,25 @@ public class adicionarvalores extends AppCompatActivity {
         }
 
         popupView.findViewById(R.id.camera).setOnClickListener(v -> {
+//            Intent intent = new Intent(historicoUser.this, camera.class);
+//            intent.putExtra("botao_selecionado", "camera");
+//            startActivity(intent);
             Toast.makeText(this, "Clicou no 1", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
 
         popupView.findViewById(R.id.galeria).setOnClickListener(v -> {
+//            Intent intent = new Intent(historicoUser.this, galeria.class);
+//            intent.putExtra("botao_selecionado", "galeria");
+//            startActivity(intent);
             Toast.makeText(this, "Clicou no 2", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
 
         popupView.findViewById(R.id.microfone).setOnClickListener(v -> {
+//            Intent intent = new Intent(historicoUser.this, microfone.class);
+//            intent.putExtra("botao_selecionado", "microfone");
+//            startActivity(intent);
             Toast.makeText(this, "Clicou no 3", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
